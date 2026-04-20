@@ -1,0 +1,62 @@
+{
+	"name": "Fiber Arts",
+	"description": "Woven, knitted, crocheted, and sewn textiles — scarves, blankets, bags, and garments.",
+	"taxonomy_labels": {
+		"wcat_material": {
+			"singular": "Fiber",
+			"plural": "Fibers"
+		},
+		"wcat_component": {
+			"singular": "Technique",
+			"plural": "Techniques"
+		}
+	},
+	"default_terms": {
+		"wcat_product_type": [
+			"Scarf",
+			"Blanket",
+			"Bag",
+			"Hat",
+			"Mittens",
+			"Shawl",
+			"Wall Hanging",
+			"Table Runner",
+			"Pillow",
+			"Garment"
+		],
+		"wcat_material": [
+			"Merino Wool",
+			"Alpaca",
+			"Cotton",
+			"Linen",
+			"Silk",
+			"Bamboo",
+			"Hemp",
+			"Cashmere",
+			"Mohair",
+			"Wool Blend"
+		],
+		"wcat_finish": [
+			"Natural",
+			"Hand Dyed",
+			"Plant Dyed",
+			"Felted",
+			"Blocked",
+			"Raw"
+		],
+		"wcat_component": [
+			"Hand Knit",
+			"Hand Woven",
+			"Crocheted",
+			"Macrame",
+			"Punch Needle",
+			"Embroidered",
+			"Quilted",
+			"Hand Sewn"
+		],
+		"wcat_product_origin": [
+			"Shop",
+			"Commission"
+		]
+	}
+}

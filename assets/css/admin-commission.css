@@ -1,0 +1,79 @@
+/* ==========================================================================
+   WC Artisan Tools — Commission Admin
+   ========================================================================== */
+
+/* Status badges */
+.wcat-status-badge {
+	display: inline-block;
+	padding: 3px 10px;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: 600;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	white-space: nowrap;
+}
+
+/* Commission table */
+.wcat-commission-table th {
+	font-size: 13px;
+}
+
+.wcat-commission-table td {
+	vertical-align: middle;
+}
+
+/* Commission detail */
+.wcat-commission-detail {
+	max-width: 800px;
+	margin-top: 20px;
+}
+
+.wcat-commission-header {
+	margin-bottom: 24px;
+}
+
+.wcat-commission-header h2 {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.wcat-commission-date {
+	color: #50575e;
+	font-size: 13px;
+	margin-top: 4px;
+}
+
+.wcat-commission-section {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	padding: 20px 24px;
+	margin-bottom: 16px;
+}
+
+.wcat-commission-section h3 {
+	margin: 0 0 12px;
+	font-size: 15px;
+}
+
+.wcat-commission-section .form-table th {
+	width: 180px;
+	padding: 10px 0;
+	font-weight: 600;
+	font-size: 13px;
+	color: #50575e;
+}
+
+.wcat-commission-section .form-table td {
+	padding: 10px 0;
+	font-size: 14px;
+}
+
+/* Status actions */
+.wcat-status-actions {
+	display: flex;
+	gap: 8px;
+}

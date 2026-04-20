@@ -1,0 +1,52 @@
+{
+	"wcat_product_type": {
+		"singular": "Product Type",
+		"plural": "Product Types",
+		"post_types": ["product"],
+		"hierarchical": true,
+		"public": true,
+		"show_in_rest": true,
+		"show_admin_column": true,
+		"rewrite": { "slug": "craft-type" }
+	},
+	"wcat_material": {
+		"singular": "Material",
+		"plural": "Materials",
+		"post_types": ["product"],
+		"hierarchical": false,
+		"public": true,
+		"show_in_rest": true,
+		"show_admin_column": true,
+		"rewrite": { "slug": "material" }
+	},
+	"wcat_finish": {
+		"singular": "Finish",
+		"plural": "Finishes",
+		"post_types": ["product"],
+		"hierarchical": false,
+		"public": true,
+		"show_in_rest": true,
+		"show_admin_column": true,
+		"rewrite": { "slug": "finish" }
+	},
+	"wcat_component": {
+		"singular": "Component",
+		"plural": "Components",
+		"post_types": ["product"],
+		"hierarchical": false,
+		"public": true,
+		"show_in_rest": true,
+		"show_admin_column": true,
+		"rewrite": { "slug": "component" }
+	},
+	"wcat_product_origin": {
+		"singular": "Origin",
+		"plural": "Origins",
+		"post_types": ["product"],
+		"hierarchical": false,
+		"public": false,
+		"show_in_rest": true,
+		"show_admin_column": false,
+		"rewrite": false
+	}
+}

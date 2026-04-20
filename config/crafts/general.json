@@ -1,0 +1,15 @@
+{
+	"name": "General",
+	"description": "A blank-slate profile for any craft. Customize the taxonomy labels and terms from the settings page.",
+	"taxonomy_labels": {},
+	"default_terms": {
+		"wcat_product_type": [],
+		"wcat_material": [],
+		"wcat_finish": [],
+		"wcat_component": [],
+		"wcat_product_origin": [
+			"Shop",
+			"Commission"
+		]
+	}
+}

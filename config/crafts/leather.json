@@ -1,0 +1,60 @@
+{
+	"name": "Leather",
+	"description": "Hand-tooled and stitched leather goods — wallets, belts, bags, journal covers, and accessories.",
+	"taxonomy_labels": {
+		"wcat_material": {
+			"singular": "Leather Type",
+			"plural": "Leather Types"
+		},
+		"wcat_component": {
+			"singular": "Hardware",
+			"plural": "Hardware"
+		}
+	},
+	"default_terms": {
+		"wcat_product_type": [
+			"Wallet",
+			"Belt",
+			"Bag",
+			"Journal Cover",
+			"Key Fob",
+			"Card Holder",
+			"Watch Strap",
+			"Holster",
+			"Dog Collar",
+			"Sheath"
+		],
+		"wcat_material": [
+			"Vegetable Tanned",
+			"Chrome Tanned",
+			"Bridle Leather",
+			"Latigo",
+			"Shell Cordovan",
+			"Horween Chromexcel",
+			"Bison",
+			"Kangaroo",
+			"Suede"
+		],
+		"wcat_finish": [
+			"Natural",
+			"Hand Dyed",
+			"Burnished",
+			"Oil Rubbed",
+			"Waxed",
+			"Antique",
+			"Matte"
+		],
+		"wcat_component": [
+			"Solid Brass",
+			"Nickel",
+			"Stainless Steel",
+			"Copper Rivet",
+			"Antique Brass",
+			"No Hardware"
+		],
+		"wcat_product_origin": [
+			"Shop",
+			"Commission"
+		]
+	}
+}

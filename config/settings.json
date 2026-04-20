@@ -1,0 +1,26 @@
+{
+	"defaults": {
+		"commission_enabled": true,
+		"commission_expiry_days": 30,
+		"commission_reminder_days": 14,
+		"default_product_status": "publish",
+		"products_per_page": 20
+	},
+	"budget_ranges": [
+		{ "value": "under-50", "label": "Under $50" },
+		{ "value": "50-100", "label": "$50 – $100" },
+		{ "value": "100-200", "label": "$100 – $200" },
+		{ "value": "200-500", "label": "$200 – $500" },
+		{ "value": "500-plus", "label": "$500+" },
+		{ "value": "no-preference", "label": "No preference" }
+	],
+	"commission_statuses": [
+		{ "value": "new", "label": "New", "color": "#2271b1" },
+		{ "value": "quoted", "label": "Quoted", "color": "#dba617" },
+		{ "value": "accepted", "label": "Accepted", "color": "#00a32a" },
+		{ "value": "in_progress", "label": "In Progress", "color": "#8c5db0" },
+		{ "value": "complete", "label": "Complete", "color": "#1a6b1a" },
+		{ "value": "declined", "label": "Declined", "color": "#787c82" },
+		{ "value": "archived", "label": "Archived", "color": "#50575e" }
+	]
+}

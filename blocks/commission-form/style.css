@@ -1,0 +1,152 @@
+.wcat-commission-form-wrapper {
+	max-width: 640px;
+}
+
+.wcat-commission-form__heading {
+	margin-bottom: 8px;
+}
+
+.wcat-commission-form__description {
+	color: #50575e;
+	margin-bottom: 24px;
+}
+
+/* Success / Error messages */
+.wcat-commission-form__success {
+	background: #edfaef;
+	border: 1px solid #00a32a;
+	border-radius: 4px;
+	padding: 16px 20px;
+	color: #1a6b1a;
+}
+
+.wcat-commission-form__error {
+	background: #fcf0f1;
+	border: 1px solid #d63638;
+	border-radius: 4px;
+	padding: 16px 20px;
+	color: #8a1e1f;
+	margin-bottom: 16px;
+}
+
+/* Form fields */
+.wcat-commission-form__field {
+	margin-bottom: 20px;
+}
+
+.wcat-commission-form__field label {
+	display: block;
+	font-weight: 600;
+	margin-bottom: 6px;
+	font-size: 14px;
+}
+
+.wcat-commission-form__field .required {
+	color: #d63638;
+}
+
+.wcat-commission-form__field input[type="text"],
+.wcat-commission-form__field input[type="email"],
+.wcat-commission-form__field select,
+.wcat-commission-form__field textarea {
+	width: 100%;
+	padding: 10px 12px;
+	border: 1px solid #8c8f94;
+	border-radius: 4px;
+	font-size: 15px;
+	font-family: inherit;
+	background: #fff;
+	transition: border-color 0.15s;
+}
+
+.wcat-commission-form__field input:focus,
+.wcat-commission-form__field select:focus,
+.wcat-commission-form__field textarea:focus {
+	border-color: #2271b1;
+	outline: 2px solid transparent;
+	box-shadow: 0 0 0 1px #2271b1;
+}
+
+.wcat-commission-form__field textarea {
+	resize: vertical;
+	min-height: 100px;
+}
+
+/* Checkbox field */
+.wcat-commission-form__field--checkbox {
+	margin-top: 4px;
+}
+
+.wcat-commission-form__field--checkbox label {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+.wcat-commission-form__field--checkbox input[type="checkbox"] {
+	width: 18px;
+	height: 18px;
+	margin: 0;
+	flex-shrink: 0;
+}
+
+/* Submit */
+.wcat-commission-form__submit {
+	margin-top: 28px;
+}
+
+.wcat-commission-form__submit .wp-element-button {
+	padding: 12px 32px;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+/* Editor preview */
+.wcat-commission-form-preview__fields {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.wcat-commission-form-preview__label {
+	display: block;
+	font-weight: 600;
+	font-size: 13px;
+	margin-bottom: 4px;
+	color: #1d2327;
+}
+
+.wcat-commission-form-preview__input {
+	height: 40px;
+	background: #f6f7f7;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+}
+
+.wcat-commission-form-preview__input--textarea {
+	height: 80px;
+}
+
+.wcat-commission-form-preview__input--select {
+	position: relative;
+}
+
+.wcat-commission-form-preview__input--select::after {
+	content: "\25BC";
+	position: absolute;
+	right: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 10px;
+	color: #8c8f94;
+}
+
+.wcat-commission-form-preview__submit {
+	margin-top: 20px;
+}
+
+.wcat-commission-form-preview__submit button {
+	pointer-events: none;
+}

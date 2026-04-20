@@ -1,0 +1,24 @@
+# Dependencies
+vendor/
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+debug.log
+
+# Environment
+.env
+.env.*
+
+# Build artifacts
+*.zip

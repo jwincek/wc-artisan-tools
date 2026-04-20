@@ -1,0 +1,33 @@
+{
+	"wcat_commission": {
+		"post_type": "wcat_commission",
+		"meta_prefix": "_wcat_",
+		"fields": {
+			"customer_name": { "type": "string" },
+			"customer_email": { "type": "email" },
+			"craft_type": { "type": "string" },
+			"material_pref": { "type": "string" },
+			"description": { "type": "textarea" },
+			"budget_range": { "type": "string" },
+			"deadline": { "type": "string" },
+			"display_name": { "type": "boolean" },
+			"status": { "type": "string" },
+			"quoted_price": { "type": "number" },
+			"estimated_date": { "type": "string" },
+			"maker_note": { "type": "textarea" },
+			"quote_token": { "type": "string" },
+			"quote_token_expires": { "type": "string" },
+			"wc_product_id": { "type": "integer" },
+			"wc_order_id": { "type": "integer" }
+		},
+		"computed": {
+			"craft_type_label": { "callback": "get_term_label", "args": ["craft_type"] },
+			"material_label": { "callback": "get_term_label", "args": ["material_pref"] },
+			"quoted_price_formatted": { "callback": "format_currency", "args": ["quoted_price"] },
+			"estimated_date_formatted": { "callback": "format_date", "args": ["estimated_date"] },
+			"accept_url": { "callback": "get_accept_url", "args": [] },
+			"decline_url": { "callback": "get_decline_url", "args": [] }
+		},
+		"taxonomies": []
+	}
+}

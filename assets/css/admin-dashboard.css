@@ -1,0 +1,237 @@
+/* ==========================================================================
+   WC Artisan Tools — Admin Dashboard
+   ========================================================================== */
+
+.wcat-dashboard {
+	max-width: 1200px;
+}
+
+/* Filters bar */
+.wcat-filters {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin: 16px 0;
+	flex-wrap: wrap;
+}
+
+.wcat-filters select {
+	min-width: 140px;
+}
+
+.wcat-count {
+	margin-left: auto;
+	color: #50575e;
+	font-size: 13px;
+}
+
+/* Empty state */
+.wcat-empty {
+	text-align: center;
+	padding: 60px 20px;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+}
+
+.wcat-empty p {
+	font-size: 16px;
+	color: #50575e;
+	margin-bottom: 16px;
+}
+
+/* Product grid */
+.wcat-product-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	gap: 16px;
+	margin-top: 8px;
+}
+
+.wcat-product-card {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 6px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	transition: box-shadow 0.15s;
+}
+
+.wcat-product-card:hover {
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.wcat-product-card--sold {
+	opacity: 0.75;
+}
+
+/* Card image */
+.wcat-product-card__image {
+	position: relative;
+	aspect-ratio: 1;
+	overflow: hidden;
+	background: #f6f7f7;
+}
+
+.wcat-product-card__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.wcat-product-card__placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+
+.wcat-product-card__placeholder .dashicons {
+	font-size: 48px;
+	width: 48px;
+	height: 48px;
+	color: #dcdcde;
+}
+
+/* Badge */
+.wcat-badge {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	padding: 4px 10px;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	color: #fff;
+}
+
+.wcat-badge--sold {
+	background: #d63638;
+}
+
+/* Card body */
+.wcat-product-card__body {
+	padding: 12px 16px;
+	flex: 1;
+}
+
+.wcat-product-card__title {
+	font-size: 15px;
+	font-weight: 600;
+	margin: 0 0 8px;
+	line-height: 1.3;
+}
+
+.wcat-product-card__meta {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 13px;
+	color: #50575e;
+}
+
+.wcat-product-card__price {
+	font-weight: 600;
+	color: #1d2327;
+}
+
+/* Card actions */
+.wcat-product-card__actions {
+	padding: 10px 16px;
+	border-top: 1px solid #f0f0f1;
+	display: flex;
+	gap: 6px;
+	flex-wrap: wrap;
+}
+
+/* Danger button */
+.wcat-button--danger {
+	color: #d63638 !important;
+	border-color: #d63638 !important;
+}
+
+.wcat-button--danger:hover {
+	background: #d63638 !important;
+	color: #fff !important;
+}
+
+/* Pagination */
+.wcat-pagination {
+	margin: 24px 0;
+	text-align: center;
+}
+
+.wcat-pagination .page-numbers {
+	display: inline-block;
+	padding: 4px 10px;
+	margin: 0 2px;
+	border: 1px solid #dcdcde;
+	border-radius: 3px;
+	text-decoration: none;
+	color: #2271b1;
+	background: #fff;
+}
+
+.wcat-pagination .page-numbers.current {
+	background: #2271b1;
+	color: #fff;
+	border-color: #2271b1;
+}
+
+/* Product form */
+.wcat-product-form {
+	max-width: 640px;
+	margin-top: 20px;
+}
+
+.wcat-field {
+	margin-bottom: 20px;
+}
+
+.wcat-field > label {
+	display: block;
+	font-weight: 600;
+	margin-bottom: 6px;
+	font-size: 13px;
+}
+
+.wcat-field--inline label {
+	font-weight: 400;
+}
+
+.wcat-field--inline {
+	margin-bottom: 8px;
+}
+
+/* Image upload */
+.wcat-image-upload {
+	display: flex;
+	align-items: flex-end;
+	gap: 12px;
+}
+
+.wcat-image-preview {
+	width: 150px;
+	height: 150px;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	overflow: hidden;
+	background: #f6f7f7;
+}
+
+.wcat-image-preview img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Form actions */
+.wcat-form-actions {
+	margin-top: 24px;
+	display: flex;
+	gap: 8px;
+}

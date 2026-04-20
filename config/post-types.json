@@ -1,0 +1,17 @@
+{
+	"wcat_commission": {
+		"singular": "Commission",
+		"plural": "Commissions",
+		"public": false,
+		"show_ui": true,
+		"show_in_rest": true,
+		"supports": ["title"],
+		"menu_icon": "dashicons-hammer",
+		"has_archive": false,
+		"rewrite": false,
+		"args": {
+			"show_in_menu": false,
+			"capability_type": "post"
+		}
+	}
+}

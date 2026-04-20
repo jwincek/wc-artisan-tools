@@ -1,0 +1,38 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wc-artisan-tools/commission-form",
+	"version": "1.0.0",
+	"title": "Commission Request Form",
+	"category": "widgets",
+	"description": "A form for customers to request custom/commissioned pieces.",
+	"textdomain": "wc-artisan-tools",
+	"attributes": {
+		"heading": {
+			"type": "string",
+			"default": "Request a Custom Piece"
+		},
+		"description": {
+			"type": "string",
+			"default": "Tell us what you're looking for and we'll send you a quote."
+		},
+		"showBudget": {
+			"type": "boolean",
+			"default": true
+		},
+		"showDeadline": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"supports": {
+		"align": ["wide", "full"],
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"editorScript": "file:./edit.js",
+	"render": "file:./render.php",
+	"style": "file:./style.css"
+}

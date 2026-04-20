@@ -1,0 +1,28 @@
+/* ==========================================================================
+   WC Artisan Tools — Commission Form (Frontend)
+   Additional styles beyond the block's style.css for frontend-only concerns.
+   ========================================================================== */
+
+/* Ensure form inputs match theme */
+.wcat-commission-form input:focus-visible,
+.wcat-commission-form select:focus-visible,
+.wcat-commission-form textarea:focus-visible {
+	outline: 2px solid var(--wp--preset--color--primary, #2271b1);
+	outline-offset: -1px;
+}
+
+/* Accessible required marker */
+.wcat-commission-form .required {
+	color: var(--wp--preset--color--vivid-red, #d63638);
+	font-weight: 400;
+}
+
+/* Submit button hover/focus */
+.wcat-commission-form__submit .wp-element-button:hover {
+	opacity: 0.9;
+}
+
+.wcat-commission-form__submit .wp-element-button:focus-visible {
+	outline: 2px solid var(--wp--preset--color--primary, #2271b1);
+	outline-offset: 2px;
+}

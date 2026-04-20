@@ -1,0 +1,64 @@
+{
+	"name": "Metalwork",
+	"description": "Forged and fabricated metal — knives, hooks, tools, hardware, and sculptural ironwork.",
+	"taxonomy_labels": {
+		"wcat_material": {
+			"singular": "Steel / Metal",
+			"plural": "Steels / Metals"
+		},
+		"wcat_component": {
+			"singular": "Handle / Accessory",
+			"plural": "Handles / Accessories"
+		}
+	},
+	"default_terms": {
+		"wcat_product_type": [
+			"Knife",
+			"Bottle Opener",
+			"Hook",
+			"Fire Poker",
+			"Candle Holder",
+			"Shelf Bracket",
+			"Letter Opener",
+			"Keychain",
+			"Sculpture",
+			"Tool"
+		],
+		"wcat_material": [
+			"1095 Carbon Steel",
+			"Damascus Steel",
+			"O1 Tool Steel",
+			"Wrought Iron",
+			"Mild Steel",
+			"Stainless Steel",
+			"Copper",
+			"Bronze",
+			"Brass"
+		],
+		"wcat_finish": [
+			"Mirror Polish",
+			"Satin",
+			"Acid Etch",
+			"Patina",
+			"Beeswax",
+			"Clear Coat",
+			"Blued",
+			"Forge Scale"
+		],
+		"wcat_component": [
+			"Walnut Handle",
+			"Micarta Handle",
+			"G10 Handle",
+			"Antler Handle",
+			"Leather Wrap",
+			"Paracord Wrap",
+			"Leather Sheath",
+			"Kydex Sheath",
+			"No Handle"
+		],
+		"wcat_product_origin": [
+			"Shop",
+			"Commission"
+		]
+	}
+}

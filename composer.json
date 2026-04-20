@@ -1,0 +1,14 @@
+{
+	"name": "jeromewincek/wc-artisan-tools",
+	"description": "A simplified WooCommerce product dashboard and commission system for artisans and makers.",
+	"type": "wordpress-plugin",
+	"license": "GPL-2.0-or-later",
+	"require": {
+		"php": ">=8.1"
+	},
+	"autoload": {
+		"psr-4": {
+			"WC_Artisan_Tools\\": "includes/"
+		}
+	}
+}

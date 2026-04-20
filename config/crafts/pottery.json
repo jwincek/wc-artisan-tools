@@ -1,0 +1,61 @@
+{
+	"name": "Pottery",
+	"description": "Wheel-thrown and hand-built ceramics — mugs, bowls, vases, plates, and sculptural pieces.",
+	"taxonomy_labels": {
+		"wcat_material": {
+			"singular": "Clay Body",
+			"plural": "Clay Bodies"
+		},
+		"wcat_finish": {
+			"singular": "Glaze",
+			"plural": "Glazes"
+		},
+		"wcat_component": {
+			"singular": "Firing Method",
+			"plural": "Firing Methods"
+		}
+	},
+	"default_terms": {
+		"wcat_product_type": [
+			"Mug",
+			"Bowl",
+			"Vase",
+			"Plate",
+			"Platter",
+			"Pitcher",
+			"Teapot",
+			"Cup",
+			"Planter",
+			"Sculpture"
+		],
+		"wcat_material": [
+			"Stoneware",
+			"Porcelain",
+			"Earthenware",
+			"Raku",
+			"Terracotta"
+		],
+		"wcat_finish": [
+			"Matte Glaze",
+			"Glossy Glaze",
+			"Satin Glaze",
+			"Ash Glaze",
+			"Salt Glaze",
+			"Unglazed",
+			"Slip Decorated",
+			"Celadon"
+		],
+		"wcat_component": [
+			"Cone 6 Electric",
+			"Cone 10 Gas",
+			"Wood Fired",
+			"Raku Fired",
+			"Pit Fired",
+			"Soda Fired"
+		],
+		"wcat_product_origin": [
+			"Shop",
+			"Commission"
+		]
+	}
+}

@@ -1,0 +1,64 @@
+{
+	"name": "Jewelry",
+	"description": "Handcrafted rings, necklaces, bracelets, earrings, and accessories.",
+	"taxonomy_labels": {
+		"wcat_material": {
+			"singular": "Metal",
+			"plural": "Metals"
+		},
+		"wcat_component": {
+			"singular": "Stone / Setting",
+			"plural": "Stones / Settings"
+		}
+	},
+	"default_terms": {
+		"wcat_product_type": [
+			"Ring",
+			"Necklace",
+			"Bracelet",
+			"Earrings",
+			"Pendant",
+			"Brooch",
+			"Cuff",
+			"Anklet",
+			"Tie Clip",
+			"Money Clip"
+		],
+		"wcat_material": [
+			"Sterling Silver",
+			"Gold Fill",
+			"14K Gold",
+			"Brass",
+			"Copper",
+			"Titanium",
+			"Stainless Steel",
+			"Bronze"
+		],
+		"wcat_finish": [
+			"Polished",
+			"Brushed",
+			"Hammered",
+			"Oxidized",
+			"Patina",
+			"Matte",
+			"Mirror"
+		],
+		"wcat_component": [
+			"Bezel Set",
+			"Prong Set",
+			"Channel Set",
+			"Turquoise",
+			"Garnet",
+			"Amethyst",
+			"Moonstone",
+			"Opal",
+			"Pearl",
+			"Lab-Grown Diamond",
+			"No Stone"
+		],
+		"wcat_product_origin": [
+			"Shop",
+			"Commission"
+		]
+	}
+}

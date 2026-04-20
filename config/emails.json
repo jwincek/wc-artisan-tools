@@ -1,0 +1,101 @@
+{
+	"emails": {
+		"new-request": {
+			"title": "New Commission Request",
+			"description": "Sent to the shop owner when a customer submits a commission request.",
+			"trigger_hook": "wcat_commission_created",
+			"trigger_args": ["commission_id"],
+			"entities": {
+				"commission": { "entity": "wcat_commission", "id_from": "commission_id" }
+			},
+			"recipient_type": "admin",
+			"subject": "New custom {craft_type} request from {customer_name}",
+			"heading": "New Commission Request",
+			"template": "emails/new-request.php",
+			"placeholders": {
+				"customer_name": "commission.customer_name",
+				"customer_email": "commission.customer_email",
+				"craft_type": "commission.craft_type",
+				"material": "commission.material_pref",
+				"budget": "commission.budget_range",
+				"description": "commission.description"
+			}
+		},
+		"quote-sent": {
+			"title": "Commission Quote",
+			"description": "Sent to the customer when the maker sends a quote for their commission.",
+			"trigger_hook": "wcat_quote_sent",
+			"trigger_args": ["commission_id"],
+			"entities": {
+				"commission": { "entity": "wcat_commission", "id_from": "commission_id" }
+			},
+			"recipient_type": "custom",
+			"recipient_field": "commission.customer_email",
+			"subject": "Your custom {craft_type} quote from {site_name}",
+			"heading": "Your Quote is Ready",
+			"template": "emails/quote-sent.php",
+			"placeholders": {
+				"customer_name": "commission.customer_name",
+				"craft_type": "commission.craft_type",
+				"quoted_price": "commission.quoted_price_formatted",
+				"estimated_date": "commission.estimated_date_formatted",
+				"maker_note": "commission.maker_note",
+				"accept_url": "commission.accept_url",
+				"decline_url": "commission.decline_url"
+			}
+		},
+		"quote-accepted": {
+			"title": "Commission Accepted",
+			"description": "Sent to the shop owner when a customer accepts a quote.",
+			"trigger_hook": "wcat_quote_accepted",
+			"trigger_args": ["commission_id"],
+			"entities": {
+				"commission": { "entity": "wcat_commission", "id_from": "commission_id" }
+			},
+			"recipient_type": "admin",
+			"subject": "{customer_name} accepted their {craft_type} commission",
+			"heading": "Quote Accepted",
+			"template": "emails/quote-accepted.php",
+			"placeholders": {
+				"customer_name": "commission.customer_name",
+				"craft_type": "commission.craft_type",
+				"quoted_price": "commission.quoted_price_formatted"
+			}
+		},
+		"quote-declined": {
+			"title": "Commission Declined",
+			"description": "Sent to the shop owner when a customer declines a quote.",
+			"trigger_hook": "wcat_quote_declined",
+			"trigger_args": ["commission_id"],
+			"entities": {
+				"commission": { "entity": "wcat_commission", "id_from": "commission_id" }
+			},
+			"recipient_type": "admin",
+			"subject": "{customer_name} declined their {craft_type} commission",
+			"heading": "Quote Declined",
+			"template": "emails/quote-declined.php",
+			"placeholders": {
+				"customer_name": "commission.customer_name",
+				"craft_type": "commission.craft_type"
+			}
+		},
+		"commission-complete": {
+			"title": "Commission Complete",
+			"description": "Sent to the customer when the maker marks a commission as complete.",
+			"trigger_hook": "wcat_commission_completed",
+			"trigger_args": ["commission_id"],
+			"entities": {
+				"commission": { "entity": "wcat_commission", "id_from": "commission_id" }
+			},
+			"recipient_type": "custom",
+			"recipient_field": "commission.customer_email",
+			"subject": "Your custom {craft_type} from {site_name} is complete!",
+			"heading": "Your Piece is Ready",
+			"template": "emails/commission-complete.php",
+			"placeholders": {
+				"customer_name": "commission.customer_name",
+				"craft_type": "commission.craft_type"
+			}
+		}
+	}
+}

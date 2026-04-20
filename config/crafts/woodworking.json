@@ -1,0 +1,68 @@
+{
+	"name": "Woodworking",
+	"description": "Hand-turned and hand-crafted wood items — pens, bowls, cutting boards, utensils, and more.",
+	"taxonomy_labels": {
+		"wcat_material": {
+			"singular": "Wood Species",
+			"plural": "Wood Species"
+		},
+		"wcat_component": {
+			"singular": "Hardware",
+			"plural": "Hardware"
+		}
+	},
+	"default_terms": {
+		"wcat_product_type": [
+			"Pen",
+			"Bowl",
+			"Razor",
+			"Coffee Scoop",
+			"Bottle Stopper",
+			"Letter Opener",
+			"Cutting Board",
+			"Rolling Pin",
+			"Utensil"
+		],
+		"wcat_material": [
+			"Black Walnut",
+			"Cherry",
+			"Maple",
+			"Spalted Maple",
+			"Oak",
+			"Olive",
+			"Padauk",
+			"Purple Heart",
+			"Bocote",
+			"Zebrawood",
+			"Cedar",
+			"Hickory",
+			"Ash",
+			"Ebony",
+			"Cocobolo"
+		],
+		"wcat_finish": [
+			"CA Glue",
+			"Tung Oil",
+			"Beeswax",
+			"Danish Oil",
+			"Lacquer",
+			"Food Safe",
+			"Raw"
+		],
+		"wcat_component": [
+			"Slimline",
+			"Cigar",
+			"Bolt Action",
+			"Tactical",
+			"Click",
+			"Fountain",
+			"Rollerball",
+			"Double Edge Razor",
+			"Mach 3 Razor"
+		],
+		"wcat_product_origin": [
+			"Shop",
+			"Commission"
+		]
+	}
+}
