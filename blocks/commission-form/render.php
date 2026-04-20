@@ -76,7 +76,7 @@ $wrapper_attributes = get_block_wrapper_attributes( [
 
 	<?php if ( $form_success ) : ?>
 		<div class="wcat-commission-form__success">
-			<p><?php esc_html_e( 'Thank you! Your commission request has been submitted. We\'ll be in touch soon with a quote.', 'wc-artisan-tools' ); ?></p>
+			<p><?php echo esc_html( $attributes['successMessage'] ?? __( 'Thank you! Your commission request has been submitted. We\'ll be in touch soon with a quote.', 'wc-artisan-tools' ) ); ?></p>
 		</div>
 	<?php else : ?>
 

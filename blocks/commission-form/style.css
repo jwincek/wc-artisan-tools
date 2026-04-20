@@ -118,6 +118,49 @@
 	color: #1d2327;
 }
 
+/* Live text inputs in editor */
+.wcat-commission-form-preview__text-input,
+.wcat-commission-form-preview__textarea-input {
+	width: 100%;
+	padding: 10px 12px;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	font-size: 14px;
+	font-family: inherit;
+	background: #f6f7f7;
+	color: #8c8f94;
+	box-sizing: border-box;
+}
+
+.wcat-commission-form-preview__textarea-input {
+	resize: none;
+	min-height: 80px;
+}
+
+/* Live select dropdowns in editor */
+.wcat-commission-form-preview__select {
+	width: 100%;
+	padding: 10px 12px;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	font-size: 14px;
+	font-family: inherit;
+	background: #f6f7f7;
+	color: #1d2327;
+	appearance: auto;
+	box-sizing: border-box;
+}
+
+/* Checkbox label in editor */
+.wcat-commission-form-preview__checkbox-label {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 13px;
+	color: #1d2327;
+}
+
+/* Fallback gray box inputs (unused but kept for compatibility) */
 .wcat-commission-form-preview__input {
 	height: 40px;
 	background: #f6f7f7;
@@ -129,24 +172,27 @@
 	height: 80px;
 }
 
-.wcat-commission-form-preview__input--select {
-	position: relative;
-}
-
-.wcat-commission-form-preview__input--select::after {
-	content: "\25BC";
-	position: absolute;
-	right: 12px;
-	top: 50%;
-	transform: translateY(-50%);
-	font-size: 10px;
-	color: #8c8f94;
-}
-
 .wcat-commission-form-preview__submit {
 	margin-top: 20px;
 }
 
 .wcat-commission-form-preview__submit button {
 	pointer-events: none;
+}
+
+/* Success message preview in editor */
+.wcat-commission-form-preview__success-preview {
+	margin-top: 24px;
+	padding-top: 20px;
+	border-top: 1px dashed #dcdcde;
+}
+
+.wcat-commission-form-preview__success-label {
+	display: block;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	color: #8c8f94;
+	margin-bottom: 8px;
 }

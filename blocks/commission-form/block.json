@@ -16,6 +16,10 @@
 			"type": "string",
 			"default": "Tell us what you're looking for and we'll send you a quote."
 		},
+		"successMessage": {
+			"type": "string",
+			"default": "Thank you! Your commission request has been submitted. We'll be in touch soon with a quote."
+		},
 		"showBudget": {
 			"type": "boolean",
 			"default": true
@@ -30,6 +34,23 @@
 		"spacing": {
 			"margin": true,
 			"padding": true
+		},
+		"color": {
+			"text": true,
+			"background": true,
+			"link": true
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true,
+			"__experimentalDefaultControls": {
+				"color": true,
+				"radius": true,
+				"style": true,
+				"width": true
+			}
 		}
 	},
 	"editorScript": "file:./edit.js",
