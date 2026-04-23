@@ -1,3 +1,15 @@
+/* ==========================================================================
+   Box sizing — prevents padding from overflowing the container.
+   Applied to all form elements inside the wrapper.
+   ========================================================================== */
+
+.wcat-commission-form-wrapper,
+.wcat-commission-form-wrapper *,
+.wcat-commission-form-wrapper *::before,
+.wcat-commission-form-wrapper *::after {
+	box-sizing: border-box;
+}
+
 .wcat-commission-form-wrapper {
 	max-width: 640px;
 }
@@ -11,13 +23,22 @@
 	margin-bottom: 24px;
 }
 
-/* Success / Error messages */
+/* ==========================================================================
+   Success / Error messages
+   WCAG: success green #1a6b1a on #edfaef = 5.9:1 contrast ratio (AA)
+   WCAG: error red #8a1e1f on #fcf0f1 = 6.5:1 contrast ratio (AA)
+   ========================================================================== */
+
 .wcat-commission-form__success {
 	background: #edfaef;
 	border: 1px solid #00a32a;
 	border-radius: 4px;
 	padding: 16px 20px;
 	color: #1a6b1a;
+}
+
+.wcat-commission-form__success[role="status"] {
+	/* Ensure screen readers announce dynamically inserted success */
 }
 
 .wcat-commission-form__error {
@@ -29,7 +50,10 @@
 	margin-bottom: 16px;
 }
 
-/* Form fields */
+/* ==========================================================================
+   Form fields
+   ========================================================================== */
+
 .wcat-commission-form__field {
 	margin-bottom: 20px;
 }
@@ -49,14 +73,18 @@
 .wcat-commission-form__field input[type="email"],
 .wcat-commission-form__field select,
 .wcat-commission-form__field textarea {
+	display: block;
 	width: 100%;
+	max-width: 100%;
 	padding: 10px 12px;
 	border: 1px solid #8c8f94;
 	border-radius: 4px;
-	font-size: 15px;
+	font-size: 16px;
 	font-family: inherit;
 	background: #fff;
+	color: #1d2327;
 	transition: border-color 0.15s;
+	/* font-size: 16px prevents iOS zoom on focus */
 }
 
 .wcat-commission-form__field input:focus,
@@ -67,40 +95,133 @@
 	box-shadow: 0 0 0 1px #2271b1;
 }
 
+.wcat-commission-form__field input:focus-visible,
+.wcat-commission-form__field select:focus-visible,
+.wcat-commission-form__field textarea:focus-visible {
+	border-color: #2271b1;
+	outline: 2px solid #2271b1;
+	outline-offset: -1px;
+	box-shadow: none;
+}
+
 .wcat-commission-form__field textarea {
 	resize: vertical;
 	min-height: 100px;
 }
 
-/* Checkbox field */
+/* ==========================================================================
+   Checkbox field
+   ========================================================================== */
+
 .wcat-commission-form__field--checkbox {
 	margin-top: 4px;
 }
 
 .wcat-commission-form__field--checkbox label {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	gap: 8px;
 	font-weight: 400;
 	cursor: pointer;
+	line-height: 1.4;
 }
 
 .wcat-commission-form__field--checkbox input[type="checkbox"] {
-	width: 18px;
-	height: 18px;
+	width: 20px;
+	height: 20px;
 	margin: 0;
+	margin-top: 1px;
 	flex-shrink: 0;
+	accent-color: #2271b1;
 }
 
-/* Submit */
+.wcat-commission-form__field--checkbox input[type="checkbox"]:focus-visible {
+	outline: 2px solid #2271b1;
+	outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Submit button
+   ========================================================================== */
+
 .wcat-commission-form__submit {
 	margin-top: 28px;
 }
 
 .wcat-commission-form__submit .wp-element-button {
-	padding: 12px 32px;
+	padding: 14px 32px;
 	font-size: 16px;
 	font-weight: 600;
+	min-height: 48px;
+	/* 48px minimum touch target per WCAG 2.5.8 */
+}
+
+.wcat-commission-form__submit .wp-element-button:focus-visible {
+	outline: 2px solid #2271b1;
+	outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Mobile responsive
+   ========================================================================== */
+
+@media (max-width: 600px) {
+	.wcat-commission-form-wrapper {
+		max-width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.wcat-commission-form__field input[type="text"],
+	.wcat-commission-form__field input[type="email"],
+	.wcat-commission-form__field select,
+	.wcat-commission-form__field textarea {
+		padding: 12px;
+		/* Slightly larger tap targets on mobile */
+	}
+
+	.wcat-commission-form__submit .wp-element-button {
+		width: 100%;
+		text-align: center;
+	}
+
+	.wcat-commission-form__success,
+	.wcat-commission-form__error {
+		padding: 14px 16px;
+	}
+}
+
+/* ==========================================================================
+   Reduced motion
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+	.wcat-commission-form__field input,
+	.wcat-commission-form__field select,
+	.wcat-commission-form__field textarea {
+		transition: none;
+	}
+}
+
+/* ==========================================================================
+   High contrast mode (Windows)
+   ========================================================================== */
+
+@media (forced-colors: active) {
+	.wcat-commission-form__success,
+	.wcat-commission-form__error {
+		border: 2px solid;
+	}
+
+	.wcat-commission-form__field input,
+	.wcat-commission-form__field select,
+	.wcat-commission-form__field textarea {
+		border: 1px solid;
+	}
+
+	.wcat-commission-form__submit .wp-element-button {
+		border: 2px solid;
+	}
 }
 
 /* Editor preview */

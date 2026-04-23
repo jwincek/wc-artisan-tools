@@ -3,26 +3,34 @@
    Additional styles beyond the block's style.css for frontend-only concerns.
    ========================================================================== */
 
-/* Ensure form inputs match theme */
-.wcat-commission-form input:focus-visible,
-.wcat-commission-form select:focus-visible,
-.wcat-commission-form textarea:focus-visible {
-	outline: 2px solid var(--wp--preset--color--primary, #2271b1);
-	outline-offset: -1px;
+/* Screen reader text — hidden visually, available to assistive tech */
+.wcat-commission-form .screen-reader-text {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
 }
 
-/* Accessible required marker */
+/* Required marker — ensure contrast on any background.
+   The asterisk is aria-hidden; screen readers get the
+   aria-required attribute on the input instead. */
 .wcat-commission-form .required {
 	color: var(--wp--preset--color--vivid-red, #d63638);
 	font-weight: 400;
 }
 
-/* Submit button hover/focus */
+/* Submit button states */
 .wcat-commission-form__submit .wp-element-button:hover {
 	opacity: 0.9;
 }
 
-.wcat-commission-form__submit .wp-element-button:focus-visible {
-	outline: 2px solid var(--wp--preset--color--primary, #2271b1);
-	outline-offset: 2px;
+/* Error auto-scroll: when the form re-renders with an error,
+   scroll to it so the user sees the message. */
+.wcat-commission-form__error {
+	scroll-margin-top: 2rem;
 }

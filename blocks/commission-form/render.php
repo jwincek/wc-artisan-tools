@@ -75,31 +75,37 @@ $wrapper_attributes = get_block_wrapper_attributes( [
 	<?php endif; ?>
 
 	<?php if ( $form_success ) : ?>
-		<div class="wcat-commission-form__success">
+		<div class="wcat-commission-form__success" role="status" aria-live="polite">
 			<p><?php echo esc_html( $attributes['successMessage'] ?? __( 'Thank you! Your commission request has been submitted. We\'ll be in touch soon with a quote.', 'wc-artisan-tools' ) ); ?></p>
 		</div>
 	<?php else : ?>
 
 		<?php if ( $form_error ) : ?>
-			<div class="wcat-commission-form__error">
+			<div class="wcat-commission-form__error" role="alert" id="wcat-form-error">
 				<p><?php echo esc_html( $form_error ); ?></p>
 			</div>
 		<?php endif; ?>
 
-		<form method="post" class="wcat-commission-form">
+		<form method="post" class="wcat-commission-form" novalidate
+			  aria-label="<?php esc_attr_e( 'Commission request form', 'wc-artisan-tools' ); ?>"
+			  <?php echo $form_error ? 'aria-describedby="wcat-form-error"' : ''; ?>>
 			<?php wp_nonce_field( 'wcat_commission_form', 'wcat_commission_form_nonce' ); ?>
 
 			<!-- Name -->
 			<div class="wcat-commission-form__field">
-				<label for="wcat-customer-name"><?php esc_html_e( 'Your Name', 'wc-artisan-tools' ); ?> <span class="required">*</span></label>
+				<label for="wcat-customer-name"><?php esc_html_e( 'Your Name', 'wc-artisan-tools' ); ?> <span class="required" aria-hidden="true">*</span></label>
 				<input type="text" id="wcat-customer-name" name="customer_name" required
+					   autocomplete="name"
+					   aria-required="true"
 					   value="<?php echo esc_attr( sanitize_text_field( wp_unslash( $_POST['customer_name'] ?? '' ) ) ); ?>">
 			</div>
 
 			<!-- Email -->
 			<div class="wcat-commission-form__field">
-				<label for="wcat-customer-email"><?php esc_html_e( 'Your Email', 'wc-artisan-tools' ); ?> <span class="required">*</span></label>
+				<label for="wcat-customer-email"><?php esc_html_e( 'Your Email', 'wc-artisan-tools' ); ?> <span class="required" aria-hidden="true">*</span></label>
 				<input type="email" id="wcat-customer-email" name="customer_email" required
+					   autocomplete="email"
+					   aria-required="true"
 					   value="<?php echo esc_attr( sanitize_email( wp_unslash( $_POST['customer_email'] ?? '' ) ) ); ?>">
 			</div>
 
@@ -137,8 +143,9 @@ $wrapper_attributes = get_block_wrapper_attributes( [
 
 			<!-- Description -->
 			<div class="wcat-commission-form__field">
-				<label for="wcat-comm-description"><?php esc_html_e( 'Describe what you\'re looking for', 'wc-artisan-tools' ); ?> <span class="required">*</span></label>
-				<textarea id="wcat-comm-description" name="description" rows="4" required><?php
+				<label for="wcat-comm-description"><?php esc_html_e( 'Describe what you\'re looking for', 'wc-artisan-tools' ); ?> <span class="required" aria-hidden="true">*</span></label>
+				<textarea id="wcat-comm-description" name="description" rows="4" required
+						  aria-required="true"><?php
 					echo esc_textarea( wp_unslash( $_POST['description'] ?? '' ) );
 				?></textarea>
 			</div>
@@ -171,12 +178,15 @@ $wrapper_attributes = get_block_wrapper_attributes( [
 
 			<!-- Display Name Checkbox -->
 			<div class="wcat-commission-form__field wcat-commission-form__field--checkbox">
-				<label>
-					<input type="checkbox" name="display_name" value="1"
+				<label for="wcat-display-name">
+					<input type="checkbox" id="wcat-display-name" name="display_name" value="1"
 						<?php checked( ! empty( $_POST['display_name'] ) ); ?>>
 					<?php esc_html_e( 'Display my first name on the finished piece listing', 'wc-artisan-tools' ); ?>
 				</label>
 			</div>
+
+			<!-- Required fields note (screen reader) -->
+			<p class="screen-reader-text"><?php esc_html_e( 'Fields marked with * are required.', 'wc-artisan-tools' ); ?></p>
 
 			<div class="wcat-commission-form__submit">
 				<button type="submit" class="wp-element-button">
