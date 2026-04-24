@@ -141,6 +141,7 @@ add_action( 'plugins_loaded', function (): void {
 		WC_Artisan_Tools\Admin\Settings::init();
 		WC_Artisan_Tools\Admin\Dashboard::init();
 		WC_Artisan_Tools\Admin\Commission_Admin::init();
+		WC_Artisan_Tools\Admin\Migration::init();
 
 		// Deferred rewrite flush after craft profile change.
 		add_action( 'admin_init', function (): void {

@@ -1,0 +1,144 @@
+/* ==========================================================================
+   WC Artisan Tools — Migration Tool
+   ========================================================================== */
+
+.wcat-migration__intro {
+	font-size: 14px;
+	color: #50575e;
+	max-width: 700px;
+}
+
+/* Summary card */
+.wcat-migration__summary {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	padding: 20px 24px;
+	margin: 20px 0;
+}
+
+.wcat-migration__summary h2 {
+	margin: 0 0 12px;
+	font-size: 16px;
+}
+
+.wcat-migration__summary ul {
+	margin: 0;
+	list-style: disc inside;
+}
+
+.wcat-migration__summary li {
+	padding: 2px 0;
+	font-size: 14px;
+}
+
+/* Sections */
+.wcat-migration__section {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	padding: 20px 24px;
+	margin-bottom: 16px;
+}
+
+.wcat-migration__section h3 {
+	margin: 0 0 8px;
+	font-size: 15px;
+}
+
+.wcat-migration__section > .description {
+	margin-bottom: 16px;
+	color: #50575e;
+}
+
+/* Tables */
+.wcat-migration__table select,
+.wcat-migration__values-table select {
+	min-width: 160px;
+}
+
+.wcat-migration__table input[type="text"],
+.wcat-migration__values-table input[type="text"] {
+	width: 100%;
+	max-width: 240px;
+}
+
+/* Attribute groups */
+.wcat-migration__attribute-group {
+	margin-bottom: 24px;
+	padding-bottom: 24px;
+	border-bottom: 1px solid #f0f0f1;
+}
+
+.wcat-migration__attribute-group:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.wcat-migration__attribute-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 12px;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.wcat-migration__attribute-header h4 {
+	margin: 0;
+	font-size: 14px;
+}
+
+.wcat-migration__count {
+	font-weight: 400;
+	color: #50575e;
+	font-size: 12px;
+	margin-left: 8px;
+}
+
+.wcat-migration__attribute-target label {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 13px;
+	color: #50575e;
+}
+
+.wcat-migration__attribute-target select {
+	min-width: 200px;
+}
+
+/* Values table */
+.wcat-migration__values-table {
+	margin-top: 8px;
+}
+
+.wcat-migration__values-table .check-column {
+	width: 30px;
+	padding: 8px;
+}
+
+/* Actions */
+.wcat-migration__actions {
+	margin: 24px 0;
+}
+
+.wcat-migration__actions .description {
+	margin-top: 8px;
+	color: #50575e;
+	font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 782px) {
+	.wcat-migration__attribute-header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.wcat-migration__table input[type="text"],
+	.wcat-migration__values-table input[type="text"] {
+		max-width: 100%;
+	}
+}

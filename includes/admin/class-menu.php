@@ -77,6 +77,16 @@ final class Menu {
 			[ Commission_Admin::class, 'render_page' ]
 		);
 
+		// Migration tool.
+		add_submenu_page(
+			'wcat-dashboard',
+			__( 'Migration', 'wc-artisan-tools' ),
+			__( 'Migration', 'wc-artisan-tools' ),
+			'manage_options',
+			'wcat-migration',
+			[ Migration::class, 'render_page' ]
+		);
+
 		// Settings.
 		add_submenu_page(
 			'wcat-dashboard',
