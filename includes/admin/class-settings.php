@@ -81,10 +81,11 @@ final class Settings {
 	 */
 	public static function sanitize_settings( array $input ): array {
 		return [
-			'commission_enabled'       => ! empty( $input['commission_enabled'] ),
-			'commission_expiry_days'   => min( 90, max( 7, absint( $input['commission_expiry_days'] ?? 30 ) ) ),
-			'commission_reminder_days' => min( 60, max( 3, absint( $input['commission_reminder_days'] ?? 14 ) ) ),
-			'products_per_page'        => min( 100, max( 5, absint( $input['products_per_page'] ?? 20 ) ) ),
+			'commission_enabled'          => ! empty( $input['commission_enabled'] ),
+			'commission_expiry_days'      => min( 90, max( 7, absint( $input['commission_expiry_days'] ?? 30 ) ) ),
+			'commission_reminder_days'    => min( 60, max( 3, absint( $input['commission_reminder_days'] ?? 14 ) ) ),
+			'products_per_page'           => min( 100, max( 5, absint( $input['products_per_page'] ?? 20 ) ) ),
+			'redirect_taxonomy_archives'  => ! empty( $input['redirect_taxonomy_archives'] ),
 		];
 	}
 
@@ -174,6 +175,26 @@ final class Settings {
 							<input type="number" id="wcat-per-page" name="wcat_settings[products_per_page]"
 								   value="<?php echo esc_attr( (string) ( $settings['products_per_page'] ?? 20 ) ); ?>"
 								   min="5" max="100" class="small-text">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><?php esc_html_e( 'Taxonomy Archives', 'wc-artisan-tools' ); ?></th>
+						<td>
+							<label>
+								<input type="checkbox" name="wcat_settings[redirect_taxonomy_archives]" value="1"
+									<?php checked( $settings['redirect_taxonomy_archives'] ?? false ); ?>>
+								<?php esc_html_e( 'Redirect taxonomy archives to filtered shop page', 'wc-artisan-tools' ); ?>
+							</label>
+							<p class="description">
+								<?php
+								printf(
+									/* translators: %1$s: example archive URL, %2$s: example shop URL */
+									esc_html__( 'When enabled, visiting %1$s redirects to %2$s so customers see a filtered product grid instead of a bare archive.', 'wc-artisan-tools' ),
+									'<code>/craft-type/pen/</code>',
+									'<code>/shop/?wcat_product_type=pen</code>'
+								);
+								?>
+							</p>
 						</td>
 					</tr>
 				</table>

@@ -121,6 +121,7 @@ add_action( 'plugins_loaded', function (): void {
 	WC_Artisan_Tools\WooCommerce\Product_Manager::init();
 	WC_Artisan_Tools\WooCommerce\Order_Handler::init();
 	WC_Artisan_Tools\WooCommerce\My_Account::init();
+	WC_Artisan_Tools\WooCommerce\Taxonomy_Redirect::init();
 
 	/* --- Commission handling --- */
 	WC_Artisan_Tools\Commission\Commission_Handler::init();

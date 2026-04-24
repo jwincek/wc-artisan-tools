@@ -4,7 +4,8 @@
 		"commission_expiry_days": 30,
 		"commission_reminder_days": 14,
 		"default_product_status": "publish",
-		"products_per_page": 20
+		"products_per_page": 20,
+		"redirect_taxonomy_archives": false
 	},
 	"budget_ranges": [
 		{ "value": "under-50", "label": "Under $50" },
